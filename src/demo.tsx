@@ -12,11 +12,10 @@ export interface DemoProps {
  * @name Demo C
  * @indicator example
  */
-
 export const Demo: React.SFC<DemoProps> = props => {
   return (
     <div>
-      Hello World {props.example}
+      Hello World {props.example} {props.children}
     </div>
   );
 };
