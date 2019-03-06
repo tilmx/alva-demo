@@ -3,9 +3,9 @@ import * as React from "react";
 
 export interface DemoProps {
   /** @default BLABLABLA */
-  example: string;
-  foo: string;
-  bla: boolean;
+  example?: string;
+  foo?: string;
+  bla?: boolean;
 }
 
 /** 

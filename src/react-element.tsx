@@ -5,6 +5,13 @@ export interface TestProps {
   sample2?: React.ReactElement<any>[];
   sample3?: JSX.Element;
   sample4?: JSX.Element[];
+  /** 
+   * @default
+   * import * as React from 'react';
+   * import { Demo } from './demo';
+   * export default () => <Demo example="Hello, World!"/>
+   */
+  children?: React.ReactNode;
 }
 
 export const ReactElement: React.SFC<TestProps> = props => {
@@ -14,6 +21,7 @@ export const ReactElement: React.SFC<TestProps> = props => {
       {props.sample2}
       {props.sample3}
       {props.sample4}
+      {props.children}
     </div>
   );
 };
