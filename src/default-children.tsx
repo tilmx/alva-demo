@@ -1,4 +1,3 @@
-
 import * as React from "react";
 
 export interface DefaultChildrenProps {
@@ -8,14 +7,29 @@ export interface DefaultChildrenProps {
 	 * @default
 	 * ```tsx
 	 * import * as React from 'react';
-	 * import { Text } from '@meetalva/essentials';
+	 * import { Demo } from './demo';
 	 *
 	 * export default () => (
-	 *    <Text text="Lorem ipsum"/>
+	 *    <Demo />
 	 * );
 	 * ```
 	 **/
-    children?: React.ReactNode;
+	foo?: React.ReactNode;
+	
+	    /**
+	 * @name If False
+	 *
+	 * @default
+	 * ```tsx
+	 * import * as React from 'react';
+	 * import { Text } from '@meetalva/essentials';
+	 *
+	 * export default () => (
+	 *    <Text text="helloooooo" />
+	 * );
+	 * ```
+	 **/
+    baa?: React.ReactNode;
 }
 
 /** 
@@ -24,7 +38,7 @@ export interface DefaultChildrenProps {
 export const DefaultChildren: React.SFC<DefaultChildrenProps> = props => {
     return (
         <div>
-        {props.children}
+            Huhu {props.foo} {props.baa}
         </div>
     );
 };
